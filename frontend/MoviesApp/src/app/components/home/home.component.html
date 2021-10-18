@@ -1,0 +1,14 @@
+<mat-card class="card">
+    <div class="title-div">
+        <h1>EXPLORE YOUR NEXT MOVIES AND TV SHOWS</h1>
+    </div>
+    <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let movie of movies; let i = index"
+                class="movie-div">
+                <app-movie [movie]="movie">
+                </app-movie>
+            </div>
+        </div>
+    </div>
+</mat-card>

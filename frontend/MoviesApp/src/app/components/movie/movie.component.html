@@ -1,0 +1,24 @@
+<div fxLayout fxLayoutAlign="center center">
+    <mat-grid-list cols="2" rowHeight="3:1">
+        <img mat-card-image class="card-image" [src]="movie.image" alt="">
+        <div class="div-cl">
+            <mat-card-content>
+                <mat-card-title class="title">
+
+                    {{movie.title}} {{ movie.released}}
+
+                </mat-card-title>
+            </mat-card-content>
+        </div>
+        <div class="div-cl">
+            <span>
+                <img src="/assets/icons/star.svg" class="icon-image">
+                {{movie.rating}}
+            </span>
+            <div class="div-button">
+                <button>Read More <span> <img src="/assets/icons/arrow.svg" (click)="showMovieDetails()">
+                    </span></button>
+            </div>
+        </div>
+    </mat-grid-list>
+</div>
